@@ -60,7 +60,7 @@ class ActivitylogSupervisor
         $ipAddress = Request::getClientIp();
 
         foreach ($this->logHandlers as $logHandler) {
-            $logHandler->log($text, $userId, compact('ipAddress'));
+            $logHandler->log($text, $userId, compact('ipAddress', 'action', 'entity'));
         }
 
         return true;
