@@ -14,7 +14,7 @@ trait LogsActivity
                 $message = $model->getActivityDescriptionForEvent($eventName);
 
                 if ($message != '') {
-                    Activity::log($message);
+                    Activity::log($message, '', $eventName, get_class());
                 }
             });
         }

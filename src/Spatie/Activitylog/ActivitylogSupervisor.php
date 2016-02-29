@@ -49,7 +49,7 @@ class ActivitylogSupervisor
      *
      * @return bool
      */
-    public function log($text, $userId = '')
+    public function log($text, $userId = '', $action = '', $entity = '')
     {
         $userId = $this->normalizeUserId($userId);
 
